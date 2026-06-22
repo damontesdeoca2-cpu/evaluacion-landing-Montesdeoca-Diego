@@ -1,0 +1,537 @@
+/*variables css*/
+:root {
+    --primary: #0B3B8C;
+    --secondary: #F5C518;
+    --white: #FFFFFF;
+    --text: #1A1A2E;
+    --bg: #F0F4FF;
+    --muted: #6B7A8F;
+    --shadow: 0 8px 32px rgba(11, 59, 140, 0.15);
+    --radius: 16px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--secondary);
+}
+/*Botones y textos*/
+.text-accent {
+    color: var(--secondary);
+}
+
+.bg-dark {
+    background-color: rgb(34, 34, 69) !important;
+}
+
+.section-title {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.btn-accent {
+    background: var(--secondary);
+    color: var(--text);
+    border: none;
+    padding: .8rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: var(--transition);
+    box-shadow: 0 4px 20px rgba(245, 197, 24, 0.4);
+}
+
+.btn-accent:hover {
+    background: linear-gradient(to right, #0d0d95, #4ec0e0);
+    transform: scale(1.05);
+    box-shadow: 0 6px 30px rgba(245, 197, 24, 0.6);
+    color: var(--white);
+}
+
+.btn-outline-accent {
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    border-radius: 50px;
+    padding: .4rem 1.5rem;
+    font-weight: 600;
+    background: transparent;
+    transition: var(--transition);
+}
+
+.btn-outline-accent:hover {
+    background: var(--secondary);
+    color: var(--text);
+    transform: scale(1.02);
+}
+/*Header y navbar*/
+#header {
+    background: rgba(11, 59, 140, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--secondary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--white) !important;
+}
+
+.navbar-brand .logo-icon {
+    color: var(--secondary);
+}
+
+.navbar-toggler {
+    border-color: rgba(245, 197, 24, 0.3);
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 600;
+    padding: .5rem 1rem;
+    border-radius: 30px;
+    transition: var(--transition);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--secondary) !important;
+    background: rgba(245, 197, 24, 0.15);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--text) !important;
+    background: var(--secondary);
+}
+
+/*Hero*/
+.hero-section {
+    background: linear-gradient(135deg, var(--primary), #1A4F8C, var(--primary));
+    padding: 4rem 0;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-weight: 900;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: var(--white);
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 1.5rem 0;
+    max-width: 500px;
+}
+/*Beneficios*/
+.benefits-section {
+    background: var(--white);
+    padding: 4rem 0;
+}
+
+.benefits-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.benefit-card {
+    background: var(--bg);
+    padding: 2rem 1.5rem;
+    border-radius: var(--radius);
+    text-align: center;
+    border: 1px solid rgba(11, 59, 140, 0.1);
+    transition: var(--transition);
+    flex: 1;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--secondary);
+    box-shadow: var(--shadow);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: .8rem;
+}
+
+.benefit-card p {
+    color: var(--muted);
+}
+/*cursos*/
+.courses-section {
+    padding: 4rem 0;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.course-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--secondary);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.course-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.course-body {
+    padding: 1.5rem;
+}
+
+.course-title {
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: .5rem;
+}
+
+.course-description {
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.course-price {
+    display: inline-block;
+    background: var(--secondary);
+    color: var(--text);
+    padding: .3rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 700;
+}
+/*Nosotros*/
+.about-section {
+    background: var(--white);
+    padding: 4rem 0;
+}
+
+.about-text {
+    color: var(--muted);
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.about-list li {
+    padding: .5rem 0;
+}
+
+.about-list li i {
+    margin-right: .8rem;
+}
+/*Cta - Llamado a la acción*/
+.cta-section {
+    background: linear-gradient(135deg, var(--secondary), #D4A800);
+    padding: 4rem 0;
+}
+
+.cta-section h2 {
+    color: var(--text);
+}
+
+.cta-section p {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.cta-section .btn-accent {
+    background: var(--text);
+    color: var(--secondary);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cta-section .btn-accent:hover {
+    background: linear-gradient(to right, #0d0d95, #4ec0e0);
+    color: var(--white);
+}
+/*Formulario de contacto*/
+.contact-section {
+    background: var(--bg);
+    padding: 4rem 0;
+}
+
+.contact-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid rgba(11, 59, 140, 0.1);
+    box-shadow: var(--shadow);
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+.form-control,
+.form-select {
+    background: var(--bg);
+    border: 2px solid rgba(11, 59, 140, 0.1);
+    border-radius: 12px;
+    padding: .8rem 1rem;
+    transition: var(--transition);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 .25rem rgba(245, 197, 24, 0.25);
+    background: var(--white);
+}
+
+.form-control::placeholder {
+    color: var(--muted);
+    opacity: .6;
+}
+
+/*footer*/
+.footer {
+    background: #0A2A6B;
+    color: rgba(255, 255, 255, 0.7);
+    border-top: 2px solid var(--secondary);
+}
+
+.footer h5,
+.footer h6 {
+    color: var(--white);
+    font-weight: 700;
+}
+
+.footer .footer-brand {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: var(--transition);
+}
+
+.footer a:hover {
+    color: var(--secondary);
+}
+
+.footer .social-icons a {
+    display: inline-block;
+    transition: var(--transition);
+    font-size: 1.2rem;
+}
+
+.footer .social-icons a:hover {
+    transform: translateY(-3px);
+    color: var(--secondary);
+}
+
+.footer hr {
+    border-color: rgba(245, 197, 24, 0.2);
+}
+/*Media Queries para Responsividad */
+
+/* Tablet */
+@media (min-width:768px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-section {
+        min-height: 80vh;
+        padding: 5rem 0;
+    }
+
+    .benefits-flex {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .benefit-card {
+        padding: 2.5rem 2rem;
+    }
+
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .contact-card {
+        padding: 2.5rem 3rem;
+    }
+}
+
+/* Desktop */
+@media (min-width:1024px) {
+    .hero-title {
+        font-size: 4.5rem;
+    }
+
+    .hero-section {
+        min-height: 90vh;
+        padding: 6rem 0;
+    }
+
+    .hero-description {
+        font-size: 1.25rem;
+    }
+
+    .courses-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    .course-img {
+        height: 180px;
+    }
+
+    .contact-card {
+        padding: 3.5rem;
+    }
+}
+
+/* Móvil pequeño */
+@media (max-width:575px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        min-height: 60vh;
+        padding: 3rem 0;
+    }
+
+    .hero-description {
+        font-size: .95rem;
+    }
+
+    .btn-lg {
+        font-size: 1rem;
+        padding: .6rem 1.5rem;
+    }
+
+    .benefits-section {
+        padding: 3rem 0;
+    }
+
+    .benefit-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .benefit-icon {
+        font-size: 2.5rem;
+    }
+
+    .courses-section {
+        padding: 3rem 0;
+    }
+
+    .course-img {
+        height: 160px;
+    }
+
+    .course-body {
+        padding: 1rem;
+    }
+
+    .course-title {
+        font-size: 1rem;
+    }
+
+    .about-section {
+        padding: 3rem 0;
+    }
+
+    .about-text {
+        font-size: .9rem;
+    }
+
+    .contact-card {
+        padding: 1.5rem;
+    }
+
+    .contact-section {
+        padding: 3rem 0;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+    }
+
+    .footer ul {
+        padding-left: 0;
+    }
+
+    .footer ul li {
+        display: inline-block;
+        margin: 0 .5rem;
+    }
+}
